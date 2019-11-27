@@ -1,24 +1,53 @@
 .home {
 
+  header {
+    border-bottom: 2px dashed @navigation-border;
+    margin: 0 auto 10px auto;
+    padding-bottom: 10px;
+    @media @mobile {
+      width: 93%;
+    }
+    h2 {
+      margin-top: 2.4%;
+    }
+  }
+
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
+    @media @mobile {
+      flex-direction: column;
+      margin: 30px auto;
+      justify-content: center;
+      align-items: space-between;
+    }
    
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+      @media @mobile {
+        width: 90%;
+        margin: 0 auto;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
-
+      @media @mobile {
+        width: 95%;
+        margin: 0 auto;
+      }
       img {
         border-radius: 10px;
+        margin: 0 auto;
+        @media @mobile {
+          width: 100%;
+          margin: 0 auto;
+        }
       }
     }
   }
@@ -26,6 +55,12 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+    @media @mobile {
+      flex-direction: column-reverse;
+      margin: 30px auto;
+      justify-content: center;
+      align-items: space-between;
+    }
 
     .text-content {
       padding-left: 1%;
@@ -35,13 +70,26 @@
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+      @media @mobile {
+        width: 95%;
+        margin: 0 auto;
+      }
+      img {
+        border-radius: 10px;
+        margin: 0 auto;
+        @media @mobile {
+          width: 100%;
+          margin: 0 auto;
+        }
+      }
     }
   }
-
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
-
+    @media @mobile {
+      width: 92%;
+    }
     img {
       border-radius: 10px;
     }
@@ -52,10 +100,26 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+    @media @mobile {
+      flex-direction: column;
+      width: 92%;
+      margin: 0 auto;
+    }
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      @media @mobile {
+        width: 92%;
+        margin: 0 auto;
+      }
+      button {
+        .button(15px, 87%, 17%, bold, 1.8rem, @button-bg, 20px);
+        @media @mobile {
+          margin: 0 auto;
+          .button(15px, 90%, 50px, bold, 1.8rem, @button-bg, 20px);
+        }
+      }
     }
   }
 }// home
